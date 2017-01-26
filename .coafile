@@ -7,9 +7,17 @@ files = README.rst
 
 [WG]
 bears = WriteGoodLintBear
-files = README.rst
+files = README.rst, docs/**/*.rst
 allow_passive_voice = 'True'
 
 [LineCounting]
 bears = LineCountBear
 max_lines_per_file = 1000
+
+[DOCS]
+bears = reSTLintBear, SpaceConsistencyBear, LineLengthBear
+ignore_length_regex = ^.*https?://
+use_spaces = True
+max_line_length = 50
+files = docs/**/*.rst
+
