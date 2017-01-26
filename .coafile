@@ -1,0 +1,7 @@
+[README]
+bears = reSTLintBear, SpaceConsistencyBear, LineLengthBear
+ignore_length_regex = ^.*https?://
+use_spaces = True
+max_line_length = 150
+files = README.rst
+
