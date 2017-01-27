@@ -15,3 +15,4 @@ Dependencies
 - `Docker <https://www.docker.com/>`_
 - `write-good <https://github.com/btford/write-good/>`_
 - `alex <https://github.com/wooorm/alex>`_
+- `rstcheck <https://pypi.python.org/pypi/rstcheck>`_

@@ -15,7 +15,7 @@ bears = LineCountBear
 max_lines_per_file = 1000
 
 [DOCS]
-bears = SpaceConsistencyBear, LineLengthBear
+bears = SpaceConsistencyBear, LineLengthBear, RSTcheckBear
 ignore_length_regex = ^.*https?://
 use_spaces = True
 max_line_length = 90
