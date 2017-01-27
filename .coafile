@@ -21,3 +21,6 @@ use_spaces = True
 max_line_length = 90
 files = docs/**/*.rst
 
+[LINKS]
+files = README.rst, docs/**/**.rst
+bears = InvalidLinkBear
