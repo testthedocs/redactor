@@ -6,3 +6,4 @@ Plone Documentation Quality Assurance Framework
    :maxdepth: 2
 
    motivation
+   tests
