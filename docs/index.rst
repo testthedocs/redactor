@@ -8,3 +8,4 @@ Plone Documentation Quality Assurance Framework
    motivation
    tests
    tools
+   ci
