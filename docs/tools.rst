@@ -8,6 +8,7 @@ Tools To Use
 - `Sphinx <http://www.sphinx-doc.org/en/stable/>`_
 - `coala <https://coala.io/>`_
 - `mr.docs <http://mrdocs.readthedocs.io/en/latest/>`_
+- `ttd-lint <https://www.npmjs.com/package/ttd-lint>`_
 
 Dependencies
 ============
