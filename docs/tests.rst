@@ -49,9 +49,22 @@ Space Consistency
 Sphinx Lint
 ===========
 
-- Checks if ``sphinx build`` works in picky mode
+- Checks if ``sphinx build`` works in picky mode,
+
+To Do
+------
+
+- create a docker container for testrunner.sphinx
+- write docs about testrunner.sphinx, explain the difference to mr.docs
+- add function to run testrunner.sphinx in ci or local mode, where the difference is hiding and saving output
 
 Word Consistency
 ================
 
 - Checks for consistence use of words, like GitHub, **not** Github
+
+To Do
+------
+
+- create docker container for ttd-lint, the test one is already working
+- improve logging of script, besides showing save output to log, next to log from testrunner.sphinx
