@@ -4,7 +4,7 @@ Redactor
 
 Documentation Quality Assurance Framework aka editor in chief.
 
-A opinionated testing framework written for `Plone documentation<https://docs.plone.org>`_.
+A opinionated testing framework written for `Plone documentation <https://docs.plone.org>`_.
 
 Documentation
 =============
