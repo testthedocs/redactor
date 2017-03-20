@@ -9,18 +9,16 @@ files = README.rst
 bears = WriteGoodLintBear
 files = README.rst, docs/**/*.rst
 allow_passive_voice = 'True'
+allow_so_beginning = False
 
-[LineCounting]
+[LC]
 bears = LineCountBear
 max_lines_per_file = 1000
 
 [DOCS]
-bears = SpaceConsistencyBear, LineLengthBear, RSTcheckBear
+bears = SpaceConsistencyBear, LineLengthBear
 ignore_length_regex = ^.*https?://
 use_spaces = True
 max_line_length = 90
 files = docs/**/*.rst
 
-[LINKS]
-files = README.rst, docs/**/**.rst
-bears = InvalidLinkBear
