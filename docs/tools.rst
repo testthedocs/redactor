@@ -9,6 +9,7 @@ Tools To Use
 - `coala <https://coala.io/>`_
 - `mr.docs <http://mrdocs.readthedocs.io/en/latest/>`_
 - `ttd-lint <https://www.npmjs.com/package/ttd-lint>`_
+- `HTMLProofer <https://github.com/gjtorikian/html-proofer>`_
 
 Dependencies
 ============

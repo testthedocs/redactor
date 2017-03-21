@@ -1,5 +1,5 @@
 ===============================================
-Plone Documentation Quality Assurance Framework
+Documentation Quality Assurance Framework
 ===============================================
 
 Github
