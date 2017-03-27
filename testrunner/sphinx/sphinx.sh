@@ -1,6 +1,18 @@
 #!/bin/bash
 
-# Varisables for colors
+###
+# About:
+# Runs Sphinx in nit-picky mode
+# Dependencies:
+# - Sphinx
+###
+
+# This is for later
+# https://dev.to/thiht/shell-scripts-matter
+#set -euo pipefail
+#IFS=$'\n\t'
+
+# Colors
 ESC_SEQ="\x1b["
 COL_RESET=$ESC_SEQ"39;49;00m"
 COL_RED=$ESC_SEQ"31;01m"
