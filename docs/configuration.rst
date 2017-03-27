@@ -56,11 +56,11 @@ Created Script
 --------------
 
 .. code-block:: shell
-   
+
    #!/bin/bash
 
    echo 1
 
 .. note::
 
-	jinja2-cli workd with yaml, too
+   jinja2-cli workd with yaml, too
