@@ -1,6 +1,10 @@
 ========
-Redactor
+redactor
 ========
+
+.. image:: docs/_static/red-logo.png
+   :alt: redactor logo
+
 
 Documentation Quality Assurance Framework aka editor in chief.
 
@@ -26,4 +30,4 @@ The project is licensed under the GPLv2.
 Support
 =======
 
-If you are having issues, please let us know.
+If you are having issues, please let us `know <https://github.com/testthedocs/redactor/issues/>`_.
