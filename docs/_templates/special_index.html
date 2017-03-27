@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+{# Do this so that bootstrap is included before the main css file #}
+  {% set script_files = script_files + ["_static/myscript.js"] %}
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="{{ pathto('_static/test.css', 1) }}" />
+  <link rel="stylesheet" type="text/css" href="{{ pathto('_static/fonts/open-sans/stylesheet.css', 1) }}" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="{{ pathto('_static/fonts/source-serif-pro/source-serif-pro.css', 1) }}" />
+  <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/bootstrap.min.css', 1) }}" />
+  <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/bootstrap-theme.min.css', 1) }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+<!-- work section -->
+
+<section id="work">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+
+				<div class="section-title">
+
+                <img src="_static/red-logo.png" alt="Mountain View">
+
+					<hr>
+
+				</div>
+
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4">
+
+				<div class="inner_box">
+
+					<i class="fa fa-cloud" aria-hidden="true"></i>
+
+					<h3>ABOUT</h3>
+
+					<hr>
+
+					<p>Make your docs great again !</p>
+                    <p>A documentation testing framework</p>
+
+					<br>
+
+					<a href="#" class="readmore">Read More</a>
+
+				</div>
+
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4">
+
+				<div class="inner_box">
+
+					<i class="fa fa-clone" aria-hidden="true"></i>
+
+					<h3>INSTALL</h3>
+
+					<hr>
+
+					<p>Dependencies</p>
+                    <p>Install</p>
+
+					<br>
+
+					<a href="#" class="readmore">Read More</a>
+
+				</div>
+
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4">
+
+				<div class="inner_box">
+
+
+					<i class="fa fa-laptop" aria-hidden="true"></i>
+
+					<h3>CONFIGURATION</h3>
+
+					<hr>
+
+					<p>All about configuration and more bla</p>
+                    <p>Bla</p>
+
+					<br>
+
+					<a href="install.html" class="readmore">Read More</a>
+
+				</div>
+
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4">
+
+				<div class="inner_box">
+
+					<i class="fa fa-compass" aria-hidden="true"></i>
+
+					<h3>OVERVIEW</h3>
+
+					<hr>
+
+					<p>A random overview</p>
+                    <p> This and that</p>
+
+					<br>
+
+					<a href="#" class="readmore">Read More</a>
+
+				</div>
+
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4">
+
+				<div class="inner_box">
+
+					<i class="fa fa-commenting-o" aria-hidden="true"></i>
+
+					<h3>CONTRIBUTING</h3>
+
+					<hr>
+
+					<p>GitHub, Tests, Docs</p>
+                    <p> CI </p>
+
+					<br>
+
+					<a href="#" class="readmore">Read More</a>
+
+				</div>
+
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-4">
+
+				<div class="inner_box">
+
+					<i class="fa fa-mobile" aria-hidden="true"></i>
+
+					<h3>CONTACT</h3>
+
+					<hr>
+
+					<p>IRC</p>
+                    <p>TestTheDocs</p>
+
+					<br>
+
+					<a href="#" class="readmore">Read More</a>
+
+				</div>
+
+			</div>
+
+			<div class="clearfix"></div>
+
+		</div>
+
+		<div class="clearfix"></div>
+<div class="row">
+                    <div class="span12">
+                    <h3>Search the docs</h3>
+                        {% include "searchbox.html" %}
+                    </div>
+        </div>
+	</div>
+
+	<div class="clearfix"></div>
+
+</section>
