@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER Sven Strack <sven@so36.net>
+LABEL maintainer "Sven <sven@testthedocs.org>"
 
 ENV PIP_CACHE /root/.cache
 
