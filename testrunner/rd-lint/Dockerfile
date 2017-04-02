@@ -1,6 +1,7 @@
 FROM alpine:latest
-MAINTAINER sven <sven@testthedocs.org>
+LABEL maintainer "Sven <sven@testthedocs.org>"
 
+# Check if we can remove stuff after build
 RUN apk --no-cache add \
     musl \
     openssl \
@@ -8,10 +9,10 @@ RUN apk --no-cache add \
     ca-certificates \
     grep
 
-Add word-lint /srv/word-lint
+Add rd-lint /srv/rd-lint
 
 WORKDIR /srv
 
 # Make sure to check if tini [https://github.com/krallin/tini] could be useful
-ENTRYPOINT ["/srv/word-lint"]
+ENTRYPOINT ["/srv/rd-lint"]
 

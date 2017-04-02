@@ -16,7 +16,7 @@ INPUT_DIR="."
 FOUND_ERROR="FALSE"
 
 
-CWD_BLACKLIST=.word-lintrc
+CWD_BLACKLIST=.rd-lintrc
 
 function checkBlackListCWD () {
   blacklist_file=$1
@@ -27,7 +27,7 @@ function checkBlackListCWD () {
     do
       if [ "$CHECK" != "" ]; then
 
-        ERRORS=$(grep -wnr --color --exclude=".word-lintrc" --exclude="word_choice.rst" "${CHECK}" "$filepath" >&1)
+        ERRORS=$(grep -wnr --color --exclude=".rd-lintrc" --exclude="word_choice.rst" "${CHECK}" "$filepath" >&1)
 
         if [ "$ERRORS" != "" ]; then
 
