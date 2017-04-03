@@ -13,4 +13,5 @@ A opinionated testing framework for documenation.
    tests
    tools
    ci
-   config
+   configuration
+   theme
