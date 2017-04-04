@@ -18,16 +18,16 @@ RUN builddeps=' \
         openssh-client \
 	&& curl --silent --show-error --fail --location \
 		--header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
-		"https://caddyserver.com/download/build?os=linux&arch=amd64&features=minify"
+		"https://caddyserver.com/download/build?os=linux&arch=amd64&features=minify" \
 	| tar --no-same-owner -C /usr/bin/ -xz caddy \
 	&& chmod 0755 /usr/bin/caddy \
         && /usr/bin/caddy -version \
         && apk del --purge $builddeps
 
-EXPOSE 80 443
+EXPOSE 80 443 2015
 WORKDIR /srv
 
-ADD Caddyfile /etc/Caddyfile
+ADD tools/rd-docs/Caddyfile /etc/Caddyfile
 ADD docs/_build/html /srv/html
 
 ENTRYPOINT ["/usr/bin/caddy"]
