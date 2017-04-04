@@ -9,9 +9,10 @@ A opinionated testing framework for documenation.
 .. toctree::
    :maxdepth: 2
 
-   motivation
+   about
    tests
    tools
    ci
    configuration
    theme
+   contributing/index
