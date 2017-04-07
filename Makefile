@@ -35,7 +35,7 @@ docs-container: ## Building rd-docs container
 	@echo ""
 	@echo "$(YELLOW)==> Building Docs Container  ....$(RESET)"
 	docker build -t $(DOCS_CT_NAME):$(VERSION) --rm -f tools/rd-docs/Dockerfile .
-	docker tag $(DOCS_CT_NAME):$(VERSION) rd-docs:latest
+	docker tag $(DOCS_CT_NAME):$(VERSION) $(DOCS_CT_NAME):latest
 
 .PHONY: docs-release
 docs-release: check-release-version docs-html docs-container docs-upload ## Building docs and container
