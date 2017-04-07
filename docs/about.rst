@@ -1,25 +1,32 @@
-==========
-Motivation
-==========
+=====
+About
+=====
+
+A Testing Framework For ReStructuredText Based Dodumentation.
 
 .. note::
 
-   We started this project to improve the quality of the `Plone documentation <https://docs.plone.org>`_.
+   - This project started to improve the quality of the `Plone documentation <https://docs.plone.org>`_.
 
+   - It is heavily opinionated on personal preferences.
 
-Current
-=======
+Features
+========
 
-The current situation is that we *do not* run real tests against `our documentation <https://docs.plone.org>`_ at all.
+- ReStructuredText lint
+- Sphinx lint
+- Line length lint
+- Article length lint
+- Link check
+- Spell check
+- Word consistency check
+- Grammar check
+- HTML validation check
 
-We have a basic test, which builds the docs with `Sphinx <http://www.sphinx-doc.org/en/stable/>`_ and tries to create
-pictures with `robot framework <http://docs.plone.org/external/plone.app.robotframework/docs/source/>`_.
+Goals
+=====
 
-
-Future
-======
-
-The goal is to have a test framework, which is modular and flexible.
-
-It should be possible to run this tests local and on CI.
-
+- Configuration via toml
+- Should run local and with CI setups
+- Should be modular and flexible
+- Should support markdown
