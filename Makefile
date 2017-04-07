@@ -34,8 +34,8 @@ docs: ## Building rd-docs container
 	docker build -t rd-docs:$(VERSION) --rm -f tools/rd-docs/Dockerfile .
 	docker tag rd-docs:$(VERSION) rd-docs:latest
 
-.PHONY: docs-deploy
-docs-deploy: check_release_version html docs ## Create HTML and Container with latest docs
+.PHONY: build-docs
+build-docs: check-release-version html docs ## Building docs and container
 
 .PHONY: check-release-version
 check-release-version: ## Check Release Version

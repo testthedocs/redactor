@@ -16,3 +16,5 @@ A opinionated testing framework for documenation.
    configuration
    theme
    contributing/index
+   contact
+   status
