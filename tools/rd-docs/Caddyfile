@@ -5,3 +5,5 @@ browse
 log stdout
 
 errors stdout
+
+gzip

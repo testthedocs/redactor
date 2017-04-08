@@ -4,7 +4,7 @@ Documentation Quality Assurance Framework
 
 Documentation Quality Assurance Framework aka editor in chief.
 
-A opinionated testing framework for documenation.
+A opinionated testing framework for reStructuredText based documenation.
 
 .. toctree::
    :maxdepth: 2

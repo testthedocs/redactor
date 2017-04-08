@@ -13,7 +13,7 @@ A opinionated testing framework for documentation.
 Documentation
 =============
 
-Full documentation for end users can be found in the "docs" folder.
+Full documentation for end users can be found on https://redactor.testthedocs.org and in the "docs" folder.
 
 Contribute
 ==========
