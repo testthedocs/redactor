@@ -1,5 +1,7 @@
 FROM alpine:latest
-LABEL maintainer "Sven <sven@testthedocs.org>"
+
+LABEL maintainer "Sven <sven@testthedocs.org>" \
+    architecture="amd64"
 
 # Check if we can remove stuff after build
 RUN apk --no-cache add \
