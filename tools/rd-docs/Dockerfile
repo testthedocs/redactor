@@ -15,6 +15,7 @@ RUN builddeps=' \
         && apk --no-cache add \
         $builddeps \
         git \
+        tini \
         openssh-client \
 	&& curl --silent --show-error --fail --location \
 		--header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
@@ -30,5 +31,5 @@ WORKDIR /srv
 ADD tools/rd-docs/Caddyfile /etc/Caddyfile
 ADD docs/_build/html /srv/html
 
-ENTRYPOINT ["/usr/bin/caddy"]
+ENTRYPOINT ["/sbin/tini", "--", "/usr/bin/caddy"]
 CMD ["--conf", "/etc/Caddyfile"]

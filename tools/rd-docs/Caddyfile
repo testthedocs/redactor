@@ -7,3 +7,5 @@ log stdout
 errors stdout
 
 gzip
+
+header / Cache-Control "max-age=86400"
