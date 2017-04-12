@@ -1,5 +1,6 @@
 FROM alpine:latest
-LABEL maintainer "Sven <sven@testthedocs.org>"
+LABEL maintainer "Sven <sven@testthedocs.org>" \
+    org.label-schema.vendor = "TestTheDocs"
 
 ENV PIP_CACHE /root/.cache
 

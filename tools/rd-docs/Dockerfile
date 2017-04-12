@@ -5,6 +5,7 @@
 FROM alpine:latest
 
 LABEL maintainer "Sven <sven@testthedocs.org>" \
+    org.label-schema.vendor = "TestTheDocs" \
     caddy_version="0.9.5" \
     architecture="amd64"
 
