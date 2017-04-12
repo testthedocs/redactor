@@ -1,24 +1,24 @@
 FROM alpine:latest
 
-
 LABEL maintainer "Sven <sven@testthedocs.org>" \
     org.label-schema.vendor = "TestTheDocs"
 
 ENV PIP_CACHE /root/.cache
 
 RUN builddeps=' \
-    build-base \
-    musl-dev \
-    python3-dev \
-    git \
-    ' \
+        build-base \
+        musl-dev \
+        python3-dev \
+        git \
+        ' \
     apk add --no-cache musl \
         $builddeps \
         openssl \
         bash \
-        ca-certificates \
         python3 \
+        ca-certificates \
         clang \
+        tini \
         clang-libs \
         indent \
         nodejs \
@@ -38,9 +38,9 @@ RUN builddeps=' \
         write-good \
         remark-cli \
     && npm cache clear \
-    && apk del --purge $builddeps
+    && apk del --purge $builddeps \
+    && mkdir -p /srv/data
 
-WORKDIR /srv
-#ENTRYPOINT ["coala"]
-ENTRYPOINT ["coala", "-c", "/srv/.coafile"]
-#ENTRYPOINT ["bash"]
+VOLUME /srv/data
+WORKDIR /srv/data
+ENTRYPOINT ["/sbin/tini", "--", "coala", "-c", "/srv/data/.coafile"]
