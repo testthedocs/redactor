@@ -17,12 +17,13 @@ Link Check
 Line Length
 ===========
 
-- Checks length of lines, around 100 words
+- Checks length of lines, around 100 words, done by :doc:`testrunner/rd-coala`
+
 
 Article Length
 ==============
 
-- Checks the length of articles, to make sure there are not too long
+- Checks the length of articles, to make sure there are not too long, done by :doc:`testrunner/rd-coala`
 
 reST Lint
 =========
@@ -44,24 +45,23 @@ English Prose
 Space Consistency
 =================
 
-- Checks to avoid mix between spaces and tabs
+- Checks to avoid mix between spaces and tabs, done by :doc:`testrunner/rd-coala`
 
 Sphinx Lint
 ===========
 
-- Checks if ``sphinx build`` works in picky mode,
+- Checks if ``sphinx build`` works in picky mode, done by :doc:`testrunner/rd-sphinx`
 
 To Do
 ------
 
-- create a docker container for testrunner.sphinx
 - write docs about testrunner.sphinx, explain the difference to mr.docs
 - add function to run testrunner.sphinx in ci or local mode, where the difference is hiding and saving output
 
 Word Consistency
 ================
 
-- Checks for consistence use of words, like GitHub, **not** Github
+- Checks for consistence use of words, like GitHub, **not** Github, :doc:`testrunner/rd-lint`
 
 To Do
 ------
