@@ -10,6 +10,12 @@ Documentation Quality Assurance Framework aka editor in chief.
 
 A opinionated testing framework for documentation.
 
+
+Status
+======
+
+**WIP** There is no stable release, yet !
+
 Documentation
 =============
 
