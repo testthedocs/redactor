@@ -6,7 +6,7 @@ FROM alpine:latest
 
 LABEL maintainer "Sven <sven@testthedocs.org>" \
     org.label-schema.vendor = "TestTheDocs" \
-    caddy_version="0.10.2" \
+    caddy_version="0.10.3" \
     architecture="amd64"
 
 RUN builddeps=' \
