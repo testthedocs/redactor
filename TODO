@@ -13,6 +13,8 @@ Setup
 - Move all container in own repositories, with own docs and so on.
 - Cleanup and sort container
 - Create and use a base container where possible
+- Find out a way to use "one" config file, currently it uses one for each test, which is not perfect.
+
 
 Milestones
 ----------
