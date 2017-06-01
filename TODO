@@ -1,12 +1,30 @@
 ToDo
 ----
 
-- git tag releases
+Common
+------
+
+- Git tag releases
 
 
 Setup
 -----
 
-Move all container in own repos, with own docs and so on.
+- Move all container in own repositories, with own docs and so on.
+- Cleanup and sort container
+- Create and use a base container where possible
 
-redactor itself should be the conector and configurator, that is all.
+Milestones
+----------
+
+1
+-
+
+- Basic setup for first basic tests, the focus here is on only a couple of tests for the beginning.
+  These tests should run stable and the results should be consistent.
+
+- Focus already here on good docs and a nice user experience with install and usage.
+
+2
+-
+
