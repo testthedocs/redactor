@@ -10,6 +10,8 @@ Tools To Use
 - `mr.docs <http://mrdocs.readthedocs.io/en/latest/>`_
 - `ttd-lint <https://www.npmjs.com/package/ttd-lint>`_
 - `HTMLProofer <https://github.com/gjtorikian/html-proofer>`_
+- `textlint <https://textlint.github.io/>`_
+- `markdownlint-ci <https://github.com/igorshubovych/markdownlint-cli>`_
 
 Dependencies
 ============
@@ -18,3 +20,14 @@ Dependencies
 - `write-good <https://github.com/btford/write-good/>`_
 - `alex <https://github.com/wooorm/alex>`_
 - `rstcheck <https://pypi.python.org/pypi/rstcheck>`_
+
+
+Notes
+=====
+
+Run tests for example: 
+
+.. code-block::
+
+   textlint --rule rousseau test.md -f pretty-error
+
