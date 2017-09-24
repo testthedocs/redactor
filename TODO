@@ -4,6 +4,7 @@ ToDo
 - git tag releases
 
 
+
 Setup
 -----
 
@@ -12,3 +13,6 @@ Move all container in own repos, with own docs and so on.
 redactor itself should be the conector and configurator, that is all.
 
 Add: http://pre-commit.com/
+
+- git-hooks
+- bots [docs etc]
