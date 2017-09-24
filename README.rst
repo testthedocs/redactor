@@ -1,7 +1,3 @@
-========
-redactor
-========
-
 .. image:: docs/_static/red-logo.png
    :alt: redactor logo
 
