@@ -10,16 +10,24 @@ Documentation Quality Assurance Framework aka editor in chief.
 
 A opinionated testing framework for documentation.
 
+Main Features
+=============
 
-Status
-======
+- A set of checks to imporve documentation
 
-**WIP** There is no stable release, yet !
+Getting Started
+===============
+
+Prerequisites/Requirements
+--------------------------
+
+- `Docker` <https://docker.com/>`_
+
 
 Documentation
 =============
 
-Full documentation for end users can be found on https://redactor.testthedocs.org and in the `docs` folder.
+Full documentation for end users can be found in the "docs" folder.
 
 Contribute
 ==========
