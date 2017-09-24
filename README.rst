@@ -21,7 +21,7 @@ Getting Started
 Prerequisites/Requirements
 --------------------------
 
-- `Docker` <https://docker.com/>`_
+- `Docker <https://docker.com/>`_
 
 
 Documentation
