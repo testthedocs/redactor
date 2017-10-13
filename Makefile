@@ -6,7 +6,7 @@ VERSION := $(shell cat VERSION)
 DOCKER := $(bash docker)
 
 # Name of container
-DOCS_CT_NAME = testthedocs/rd-docs
+DOCS_CT_NAME = testthedocs/redactor
 
 # We like colors
 # From: https://coderwall.com/p/izxssa/colored-makefile-for-golang-projects
