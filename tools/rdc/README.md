@@ -1,2 +1,0 @@
-# rdc
-redactor documentation builder
