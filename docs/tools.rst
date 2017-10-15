@@ -12,6 +12,8 @@ Tools To Use
 - `HTMLProofer <https://github.com/gjtorikian/html-proofer>`_
 - `textlint <https://textlint.github.io/>`_
 - `markdownlint-ci <https://github.com/igorshubovych/markdownlint-cli>`_
+- ttd-vale
+- ttd-toctree
 
 Dependencies
 ============

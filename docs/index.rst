@@ -2,6 +2,8 @@
 Documentation Quality Assurance Framework
 =========================================
 
+:Status: WIP
+
 Documentation Quality Assurance Framework aka editor in chief.
 
 A opinionated testing framework for reStructuredText based documenation.
@@ -15,7 +17,6 @@ A opinionated testing framework for reStructuredText based documenation.
    tools
    ci
    configuration
-   theme
    contributing/index
    contact
    status
