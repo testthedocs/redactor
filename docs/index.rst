@@ -13,7 +13,6 @@ A opinionated testing framework for reStructuredText based documenation.
 
    about
    tests
-   testrunner/index
    tools
    ci
    configuration
