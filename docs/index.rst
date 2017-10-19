@@ -15,7 +15,7 @@ A opinionated testing framework for reStructuredText based documenation.
    tests
    tools
    ci
-   configuration
+   configuration/index
    contributing/index
    contact
    status
