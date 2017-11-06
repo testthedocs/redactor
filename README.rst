@@ -11,6 +11,9 @@ Main Features
 
 - A set of checks to imporve documentation
 
+.. image:: docs/_static/redactor-testing-matrix.png
+   :alt: Testing Overview
+
 Getting Started
 ===============
 
