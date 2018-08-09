@@ -1,39 +1,11 @@
-[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/testthedocs/Lobby)
+# Redactor
 
+## Contributing
+Pull requests are welcome.
 
-![Logo](docs/_static/red-logo.png)
+For major changes, please open an issue first to discuss what you would like to change.
 
-Documentation Quality Assurance Framework aka editor in chief.
-
-A opinionated testing framework for documentation.
-
-## Main Features
-
-* A set of checks to imporve documentation
-
-![Example]( docs/_static/redactor-testing-matrix.png)
-
-## Getting Started
-
-### Prerequisites/Requirements
-
-* [Docker](https://docker.com/)
-
-## Documentation
-
-Full documentation for end users can be found in the "docs" folder.
-
-## Contribute
-
-* [Issue Tracker](https://github.com/testthedocs/redactor/issues/)
-* [Source Code](https://github.com/testthedocs/redactor/)
+Please make sure to update tests as appropriate.
 
 ## License
-
-The project is licensed under the GPLv2.
-
-
-Support
-=======
-
-If you are having issues, please let us `know <https://github.com/testthedocs/redactor/issues/>`_.
+[MIT](https://choosealicense.com/licenses/mit/)

@@ -1,12 +1,11 @@
 # The shell we use
 SHELL := /bin/bash
 
-# Get version form VERSION
-VERSION := $(shell cat VERSION)
-DOCKER := $(bash docker)
+BIN_DIR := $(GOPATH)/bin
+GOMETALINTER := $(BIN_DIR)/gometalinter
 
-# Name of container
-DOCS_CT_NAME = testthedocs/redactor
+# Dependencies:
+# - https://github.com/mitchellh/gox
 
 # We like colors
 # From: https://coderwall.com/p/izxssa/colored-makefile-for-golang-projects
@@ -15,36 +14,30 @@ GREEN=`tput setaf 2`
 RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
+# Get version form VERSION
+VERSION := $(shell cat VERSION)
+DOCKER := $(bash docker)
+
 # Add the following 'help' target to your Makefile
-# # And add help text after each target name starting with '\#\#'
+# And add help text after each target name starting with '\#\#'
 .PHONY: help
 help: ## This help message
 	@echo -e "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s :)"
 
-.PHONY: docs-html
-docs-html: ## Building HTML for prod deploy
+
+.PHONY: test-release
+test-release: ## Builds binary packages for testing
 	@echo ""
-	@echo "$(YELLOW)==> Building HTML  ....$(RESET)"
-	@rm -rf docs/_build
-	@cp VERSION docs
-	docker run --rm -v "${PWD}/docs":/build/docs:rw -u "$$(id -u)":"$$(id -g)" testthedocs/rdc:latest html
-	@rm docs/VERSION
+	@echo "$(YELLOW)==> Running fmt locally ...$(RESET)"
+	go fmt
+	@echo "$(YELLOW)==> Creating binaries for version $(VERSION), please wait ....$(RESET)"
+	@if [ -d pkg ]; then rm -rf pkg; fi;
+	@gox -osarch="darwin/amd64" -output "pkg/{{.Dir}}_{{.OS}}_{{.Arch}}"
 
-.PHONY: docs-container
-docs-container: ## Building rd-docs container
-	@echo ""
-	@echo "$(YELLOW)==> Building Docs Container  ....$(RESET)"
-	docker build -t $(DOCS_CT_NAME):$(VERSION) --rm -f tools/rd-docs/Dockerfile .
-	docker tag $(DOCS_CT_NAME):$(VERSION) $(DOCS_CT_NAME):latest
+$(GOMETALINTER):
+	go get -u github.com/alecthomas/gometalinter
+	gometalinter --install &> /dev/null
 
-.PHONY: docs-release
-docs-release: check-release-version docs-html docs-container docs-upload ## Building docs and container
-
-.PHONY: check-release-version
-check-release-version: ## Check Release Version
-	@if docker images $(DOCS_CT_NAME) | awk '{ print $$2 }' | grep -q -F $(VERSION); then echo "$(RED)$(DOCS_CT_NAME) version $(VERSION) is already build !$(RESET)"; false; fi
-
-.PHONY: docs-upload
-docs-upload: ## Pushing container to docker hub
-	docker push $(DOCS_CT_NAME):$(VERSION)
-	docker push $(DOCS_CT_NAME):latest
+.PHONY: lint
+lint: $(GOMETALINTER)
+	gometalinter ./... --vendor

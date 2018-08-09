@@ -1,8 +1,0 @@
-=============
-Configuration
-=============
-
-.. toctree::
-
-   configuration
-   toml
