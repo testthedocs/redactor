@@ -1,39 +1,48 @@
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/testthedocs/Lobby)
 
-
 ![Logo](docs/_static/red-logo.png)
 
-Documentation Quality Assurance Framework aka editor in chief.
+# Redactor
 
-A opinionated testing framework for documentation.
+A work in progress editor-in-chief to highlight potential linguistic and structural issues with your text. You can watch progress in the [poc](https://github.com/testthedocs/redactor/tree/poc) branch.
 
-## Main Features
+## Features
 
-* A set of checks to imporve documentation
+User enabled and overridable documentation checks, planned for inclusion in beta release:
 
-![Example]( docs/_static/redactor-testing-matrix.png)
+- Check Markdown best practices
+- Check RST best practices
+- Check generated HTML best practices
+- Validate links
+- Spelling, Grammar, style and readability
 
-## Getting Started
+![Example](docs/_static/redactor-testing-matrix.png)
 
-### Prerequisites/Requirements
+## Dependencies
 
-* [Docker](https://docker.com/)
+- [Docker](https://docker.com/)
 
 ## Documentation
 
-Full documentation for end users can be found in the "docs" folder.
+Full documentation for end users can be found in the "[docs](./docs)" folder.
+
+## Installation
+
+None right now.
+
+## Usage
+
+None right now.
 
 ## Contribute
 
-* [Issue Tracker](https://github.com/testthedocs/redactor/issues/)
-* [Source Code](https://github.com/testthedocs/redactor/)
+- [Issue Tracker](https://github.com/testthedocs/redactor/issues/)
+- [Source Code](https://github.com/testthedocs/redactor/)
 
 ## License
 
 The project is licensed under the GPLv2.
 
-
-Support
-=======
+# Support
 
 If you are having issues, please let us `know <https://github.com/testthedocs/redactor/issues/>`_.
