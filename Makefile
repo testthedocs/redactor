@@ -1,23 +1,41 @@
-# The shell we use
+# ########################################################## #
+# Makefile for Golang Project
+# Includes cross-compiling, installation, cleanup
+# ########################################################## #
+
+#The shell we use
 SHELL := /bin/bash
 
-BIN_DIR := $(GOPATH)/bin
-GOMETALINTER := $(BIN_DIR)/gometalinter
-
-# Dependencies:
-# - https://github.com/mitchellh/gox
-
 # We like colors
-# From: https://coderwall.com/p/izxssa/colored-makefile-for-golang-projects
+# # From: https://coderwall.com/p/izxssa/colored-makefile-for-golang-projects
 RED=`tput setaf 1`
 GREEN=`tput setaf 2`
 RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
-# Get version form VERSION
+# Go settings
+BIN_DIR := $(GOPATH)/bin
+GOMETALINTER := $(BIN_DIR)/gometalinter
+PACKAGE_DIR=pkg
+
+# Check for required command tools to build or stop immediately
+EXECUTABLES = git go find pwd
+K := $(foreach exec,$(EXECUTABLES),\
+        $(if $(shell which $(exec)),some string,$(error "No $(exec) in PATH)))
+
+ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+
+
+BINARY=redactor
 VERSION := $(shell cat VERSION)
-DOCKER := $(bash docker)
-APP_NAME=redactor
+BUILD=`git rev-parse HEAD`
+PLATFORMS=darwin linux windows
+ARCHITECTURES=amd64
+
+
+
+# Setup linker flags option for build that interoperate with variable names in src code
+LDFLAGS=-ldflags "-X main.Version=${VERSION} -X main.Build=${BUILD}"
 
 # Add the following 'help' target to your Makefile
 # And add help text after each target name starting with '\#\#'
@@ -25,40 +43,25 @@ APP_NAME=redactor
 help: ## This help message
 	@echo -e "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s :)"
 
-.PHONY: docs-build
-docs-build: ## Builds HTML of the docs
-	@docker run -it --rm -v `pwd`:/docs wundertax/mkdocs:latest build
+.PHONY: default
+default: build ## Builds default binary
 
-.PHONY: docs-serve
-docs-serve: ## Starts docs in serve mode
-	@docker run -it --rm -p 8000:8000 -v `pwd`:/docs wundertax/mkdocs:latest serve
+all: clean build_all install
 
-.PHONY: docs-help
-docs-help: ## Shows docs-help
-	@docker run -it --rm -v `pwd`:/docs wundertax/mkdocs:latest help
-
-# We use https://github.com/github-changelog-generator/github-changelog-generator as Docker Container.
-# This is to make sure we have the same change-log setup through all repositories, even if that means we use ruby here :)
-.PHONY: changelog
-changelog: ## Generate changelog
+.PHONY: build
+build: ## Build test binary
 	@echo ""
-	@echo "$(YELLOW)==> Generating Change-log..$(RESET)"
-	@docker run -it --rm -v "$(pwd)":/usr/local/src/your-app ferrarimarco/github-changelog-generator wundertax/bb-8 --token $(GITHUB_TOKEN)
-	@echo ""
+	@echo "$(YELLOW)==> Creating test binaries for $(VERSION)$(RESET)"
+	go build ${LDFLAGS} -o $(PATH_BUILD)/$(BINARY)_$(VERSION)
 
-.PHONY: test-release
-test-release: ## Builds binary packages for testing
-	@echo ""
-	@echo "$(YELLOW)==> Running fmt locally ...$(RESET)"
-	@go fmt
-	@echo "$(YELLOW)==> Creating binaries for $(APP_NAME) $(VERSION) please wait ....$(RESET)"
-	@if [ -d pkg ]; then rm -rf pkg; fi;
-	@gox -osarch="darwin/amd64" -output "pkg/{{.Dir}}_{{.OS}}_{{.Arch}}"
+build_all:
+	$(foreach GOOS, $(PLATFORMS),\
+	$(foreach GOARCH, $(ARCHITECTURES), $(shell export GOOS=$(GOOS); export GOARCH=$(GOARCH); go build -v -o $(BINARY)-$(GOOS)-$(GOARCH))))
 
-$(GOMETALINTER):
-	go get -u github.com/alecthomas/gometalinter
-	gometalinter --install &> /dev/null
+install:
+	go install ${LDFLAGS}
 
-.PHONY: lint
-lint: $(GOMETALINTER)
-	gometalinter ./... --vendor
+# Remove only what we've created
+clean:
+#	find $(PACKAGE_DIR) -name '${BINARY}[-?][a-zA-Z0-9]*[-?][a-zA-Z0-9]*' -delete
+	ls -la $(ROOT_DIR)

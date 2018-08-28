@@ -18,9 +18,9 @@ import "github.com/ttd/redactor/cmd"
 
 var (
 	// VERSION is set during build
-	VERSION = "0.0.4"
+	Version = "No version yet"
 )
 
 func main() {
-	cmd.Execute(VERSION)
+	cmd.Execute(Version)
 }
