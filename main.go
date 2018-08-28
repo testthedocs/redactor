@@ -14,7 +14,7 @@
 
 package main
 
-import "github.com/ttd/redactor/cmd"
+import "github.com/testthedocs/redactor/cmd"
 
 var (
 	// VERSION is set during build

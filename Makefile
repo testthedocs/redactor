@@ -52,7 +52,7 @@ all: clean build_all install
 build: ## Build test binary
 	@echo ""
 	@echo "$(YELLOW)==> Creating test binaries for $(VERSION)$(RESET)"
-	go build ${LDFLAGS} -o $(PATH_BUILD)/$(BINARY)_$(VERSION)
+	go build ${LDFLAGS} -o $(PACKAGE_DIR)/$(BINARY)_$(VERSION)
 
 build_all:
 	$(foreach GOOS, $(PLATFORMS),\
@@ -62,6 +62,7 @@ install:
 	go install ${LDFLAGS}
 
 # Remove only what we've created
-clean:
-#	find $(PACKAGE_DIR) -name '${BINARY}[-?][a-zA-Z0-9]*[-?][a-zA-Z0-9]*' -delete
-	ls -la $(ROOT_DIR)
+clean: ## Removing old binaries
+	@echo "$(YELLOW)==> Removing old binaries...$(RESET)"
+	@if [ -d $(PACKAGE_DIR) ]; then rm -rf $(PACKAGE_DIR); fi;
+#	find $(PACKAGE_DIR) -name '${BINARY}[_?][a-zA-Z0-9]*[-?][a-zA-Z0-9]*' -delete
