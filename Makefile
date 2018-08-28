@@ -18,24 +18,21 @@ BIN_DIR := $(GOPATH)/bin
 GOMETALINTER := $(BIN_DIR)/gometalinter
 PACKAGE_DIR=pkg
 
+# Build parameters
+BINARY=redactor
+VERSION := $(shell cat VERSION)
+COMMIT := $(shell git rev-parse HEAD)
+BUILD_TIME := $(shell date -u +%FT%T)
+PLATFORMS=darwin linux windows
+ARCHITECTURES=amd64
+
+# Setup linker flags option for build that inter-operate with variable names in source code
+LDFLAGS=-ldflags "-X main.Version=${VERSION} -X main.Build=${BUILD}"
+
 # Check for required command tools to build or stop immediately
 EXECUTABLES = git go find pwd
 K := $(foreach exec,$(EXECUTABLES),\
         $(if $(shell which $(exec)),some string,$(error "No $(exec) in PATH)))
-
-ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
-
-
-BINARY=redactor
-VERSION := $(shell cat VERSION)
-BUILD=`git rev-parse HEAD`
-PLATFORMS=darwin linux windows
-ARCHITECTURES=amd64
-
-
-
-# Setup linker flags option for build that interoperate with variable names in src code
-LDFLAGS=-ldflags "-X main.Version=${VERSION} -X main.Build=${BUILD}"
 
 # Add the following 'help' target to your Makefile
 # And add help text after each target name starting with '\#\#'
@@ -65,4 +62,4 @@ install:
 clean: ## Removing old binaries
 	@echo "$(YELLOW)==> Removing old binaries...$(RESET)"
 	@if [ -d $(PACKAGE_DIR) ]; then rm -rf $(PACKAGE_DIR); fi;
-#	find $(PACKAGE_DIR) -name '${BINARY}[_?][a-zA-Z0-9]*[-?][a-zA-Z0-9]*' -delete
+
