@@ -20,7 +20,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var BuildDate = "No build yet"
+var BuildDate string
 
 // versionCmd represents the version command
 var versionCmd = &cobra.Command{
@@ -28,7 +28,7 @@ var versionCmd = &cobra.Command{
 	Short: "Show redactor version",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println(rootCmd.Use + " " + VERSION)
-                fmt.Println("Build Date:" , BuildDate)
+                fmt.Printf("Build Date: %s\n", BuildDate)
 	},
 }
 
