@@ -16,7 +16,7 @@ YELLOW=`tput setaf 3`
 # Go settings
 BIN_DIR := $(GOPATH)/bin
 GOMETALINTER := $(BIN_DIR)/gometalinter
-PACKAGE_DIR=pkg
+PACKAGE_DIR=dist
 
 # Build parameters
 BINARY=redactor
