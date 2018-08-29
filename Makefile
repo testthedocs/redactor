@@ -22,7 +22,7 @@ PACKAGE_DIR=pkg
 BINARY=redactor
 VERSION := $(shell cat VERSION)
 COMMIT := $(shell git rev-parse HEAD)
-BUILD_DATE := $(shell date -u +%FT%T)
+BUILD_DATE := $(shell date +"%m-%d-%Y")
 PLATFORMS=darwin linux windows
 ARCHITECTURES=amd64
 
