@@ -20,7 +20,10 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var BuildDate string
+var (
+    BuildDate string
+    GitCommit string
+)
 
 // versionCmd represents the version command
 var versionCmd = &cobra.Command{
@@ -29,6 +32,7 @@ var versionCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println(rootCmd.Use + " " + VERSION)
                 fmt.Printf("Build Date: %s\n", BuildDate)
+                fmt.Printf("Git Commit: %s\n", GitCommit)
 	},
 }
 

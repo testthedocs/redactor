@@ -21,14 +21,14 @@ PACKAGE_DIR=pkg
 # Build parameters
 BINARY=redactor
 VERSION := $(shell cat VERSION)
-COMMIT := $(shell git rev-parse HEAD)
+GIT_COMMIT := $(shell git rev-parse --short HEAD)
 BUILD_DATE := $(shell date +"%m-%d-%Y")
 PLATFORMS=darwin linux windows
 ARCHITECTURES=amd64
 
 # Setup linker flags option for build that inter-operate with variable names in source code
 #LDFLAGS=-ldflags "-X main.Version=${VERSION} -X main.BuildData=${BUILD_DATE}"
-LDFLAGS=-ldflags "-X main.Version=${VERSION} -X github.com/testthedocs/redactor/cmd.BuildDate=${BUILD_DATE}"
+LDFLAGS=-ldflags "-X main.Version=${VERSION} -X github.com/testthedocs/redactor/cmd.BuildDate=${BUILD_DATE} -X github.com/testthedocs/redactor/cmd.GitCommit=${GIT_COMMIT} "
 
 # Check for required command tools to build or stop immediately
 EXECUTABLES = git go find pwd
