@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://redactor.testthedocs.org"
 languageCode = "en-us"
 title = "Redactor"
 theme = "hugo-apex-theme"
