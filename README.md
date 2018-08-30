@@ -1,3 +1,5 @@
+This is the **old** master branch.
+
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/testthedocs/Lobby)
 
 ![Logo](docs/_static/red-logo.png)
