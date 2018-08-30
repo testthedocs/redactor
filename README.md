@@ -7,9 +7,6 @@
 
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/testthedocs/Lobby)
 
-![Logo](docs/_static/red-logo.png)
-
-
 A work in progress editor-in-chief to highlight potential linguistic and structural issues with your text. You can watch progress in the [poc](https://github.com/testthedocs/redactor/tree/poc) branch.
 
 ## Features
