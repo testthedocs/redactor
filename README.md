@@ -19,8 +19,6 @@ User enabled and overridable documentation checks, planned for inclusion in beta
 - Validate links
 - Spelling, Grammar, style and readability
 
-![Example](docs/_static/redactor-testing-matrix.png)
-
 ## Dependencies
 
 - [Docker](https://docker.com/)
