@@ -26,6 +26,9 @@ BUILD_DATE := $(shell date +"%m-%d-%Y")
 PLATFORMS=darwin linux windows
 ARCHITECTURES=amd64
 
+# Hugo in docker for the docs
+HUGO = docker run -it --rm -v `pwd`/docs:/src -p 1313:1313 testthedocs/ttd-hugo
+
 # Setup linker flags option for build that inter-operate with variable names in source code
 #LDFLAGS=-ldflags "-X main.Version=${VERSION} -X main.BuildData=${BUILD_DATE}"
 LDFLAGS=-ldflags "-X main.Version=${VERSION} -X github.com/testthedocs/redactor/cmd.BuildDate=${BUILD_DATE} -X github.com/testthedocs/redactor/cmd.GitCommit=${GIT_COMMIT} "
@@ -64,3 +67,6 @@ clean: ## Removing old binaries
 	@echo "$(YELLOW)==> Removing old binaries...$(RESET)"
 	@if [ -d $(PACKAGE_DIR) ]; then rm -rf $(PACKAGE_DIR); fi;
 
+.PHONY: docs-serve
+docs-serve: ## Start hugo in server mode
+	@$(HUGO) server -w --baseUrl="http://localhost:1313" --bind=0.0.0.0 --buildDrafts
