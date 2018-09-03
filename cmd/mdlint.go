@@ -32,7 +32,7 @@ var buildCmd = &cobra.Command{
 }
 
 func buildHTML() {
-	cmdStr := "docker run -it --rm -v `pwd`/docs:/srv/docs testthedocs/ttd-mdlint"
+	cmdStr := "docker run -it --rm -v `pwd`:/srv/docs testthedocs/ttd-mdlint"
         cmd := exec.Command("bash", "-c", cmdStr)
 	cmd.Stdout = os.Stdout
 	cmd.Stdin = os.Stdin

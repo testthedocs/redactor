@@ -38,7 +38,7 @@ Run: func(cmd *cobra.Command, args []string) {
 }
 
 func runVale() {
-	cmdStr := "docker run -it --rm -v `pwd`/docs:/srv/tests testthedocs/ttd-vale"
+	cmdStr := "docker run -it --rm -v `pwd`:/srv/tests testthedocs/ttd-vale"
         cmd := exec.Command("bash", "-c", cmdStr)
 	cmd.Stdout = os.Stdout
 	cmd.Stdin = os.Stdin
