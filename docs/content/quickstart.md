@@ -1,6 +1,6 @@
 ---
 title: Quick Start
-weight: 10
+weight: 11
 menu: true
 ---
 
