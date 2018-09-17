@@ -70,3 +70,7 @@ clean: ## Removing old binaries
 .PHONY: docs-serve
 docs-serve: ## Start hugo in server mode
 	@$(HUGO) server -w --baseUrl="http://localhost:1313" --bind=0.0.0.0 --buildDrafts
+
+.PHONY: html
+html: ## Build HTML of the docs
+	@@$(HUGO)
