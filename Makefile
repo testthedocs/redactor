@@ -67,10 +67,6 @@ clean: ## Removing old binaries
 	@echo "$(YELLOW)==> Removing old binaries...$(RESET)"
 	@if [ -d $(PACKAGE_DIR) ]; then rm -rf $(PACKAGE_DIR); fi;
 
-.PHONY: docs-serve
-docs-serve: ## Start hugo in server mode
-	@$(HUGO) server -w --baseUrl="http://localhost:1313" --bind=0.0.0.0 --buildDrafts
-
-.PHONY: html
-html: ## Build HTML of the docs
-	@@$(HUGO)
+.PHONY: docs
+docs: ## Building docs locally
+	@docker run -v `pwd`/docs:/build/docs testthedocs/ttd-sphinx html

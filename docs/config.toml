@@ -1,9 +1,0 @@
-baseURL = "https://redactor.testthedocs.org"
-languageCode = "en-us"
-title = "Redactor"
-theme = "hugo-apex-theme"
-pygmentsCodeFences = true
-pygmentsStyle = "dracula"
-
-[params]
-logo = "https://testthedocs.org/img/redactor-logo.png"
