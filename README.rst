@@ -2,7 +2,7 @@
 Redactor
 ========
 
-.. image:: docs/_static/redactor-logo.png
+.. image:: docs/_static/logo-small.png
 
 A work in progress editor-in-chief to highlight potential linguistic and structural issues with your text.
 
@@ -16,7 +16,8 @@ User enabled and overridable documentation checks, planned for inclusion in beta
 - Validate links
 - Spelling, Grammar, style and readability
 
-## Dependencies
+Dependencies
+============
 
 - `Docker <https://docker.com/>`_
 
@@ -50,4 +51,4 @@ Please make sure to update tests as appropriate.
 License
 =======
 
-`MIT <https://choosealicense.com/licenses/mit/>`_.
+`MIT <https://choosealicense.com/licenses/mit/>`_
