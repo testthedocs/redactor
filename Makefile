@@ -87,6 +87,7 @@ install: ## Install test binary locally
 	@echo ""
 	@echo "$(YELLOW)==> Installing test binary for $(VERSION)$(RESET)"
 	go install -ldflags "$(LD_FLAGS) -X main.Version=${VERSION} \
+	 -X github.com/testthedocs/redactor/cmd.GitCommit=$(GIT_COMMIT) \
 	 -X github.com/testthedocs/redactor/cmd.BuildDate=$(BUILD_DATE)"
 
 $(GOMETALINTER):
