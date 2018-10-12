@@ -9,10 +9,10 @@ Dependencies
 
 .. caution::
 
-    Do not blindly follow this instructions, please review our `install script <https://github.com/testthedocs/redactor/blob/master/install.sh>`_ first !
+    Do not blindly follow these instructions, review our `install script <https://github.com/testthedocs/redactor/blob/master/install.sh>`_ first.
 
 
-Install it via ``curl``:
+Install via ``curl``:
 
 .. code-block:: console
 
@@ -23,4 +23,3 @@ Install via ``go get``:
 .. code-block:: console
 
     go get github.com/testthedocs/redactor
-

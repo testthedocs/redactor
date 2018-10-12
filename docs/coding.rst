@@ -29,7 +29,7 @@ Install dependencies with ``dep``:
 
     dep ensure -vendor-only
 
-Or run ``make setup`` form the /root of the repository.
+Or run ``make setup`` from the /root of the repository.
 
 Code Blueprint
 ==============
@@ -38,7 +38,7 @@ Code Blueprint
 
 We inject the version number, the build date and the git hash via ``ldflags`` during package build into version.go (cmd/version.go).
 
-See the example below how we do that in the ``Makefile`` (here for local test installs).
+See the example below for how we do that in the ``Makefile`` (for local test installs).
 
 .. code-block:: make
 

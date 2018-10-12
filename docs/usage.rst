@@ -24,4 +24,3 @@ Markdown Lint
 .. code-block:: console
 
     redactor mdlint
-
