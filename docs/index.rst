@@ -54,3 +54,12 @@ The container then serves that JSON as HTML, or returned to the user depending o
    install
    usage
    credits
+
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+   :caption: Development
+
+   release
+   coding
+

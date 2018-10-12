@@ -9,7 +9,7 @@ Dependencies
 
 .. caution::
 
-    Do not blindly follow this instructions, please review our `install script <https://github.com/svx/ktl/blob/master/install.sh>`_ first !
+    Do not blindly follow this instructions, please review our `install script <https://github.com/testthedocs/redactor/blob/master/install.sh>`_ first !
 
 
 Install it via ``curl``:
