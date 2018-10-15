@@ -7,13 +7,9 @@ Redactor
 A work in progress editor-in-chief to highlight potential linguistic and structural issues with your text.
 
 Features
-
-User enabled and overridable documentation checks, planned for inclusion in future releases:
+========
 
 - Check Markdown best practices
-- Check RST best practices
-- Check generated HTML best practices
-- Validate links
 - Spelling, Grammar, style and readability
 
 Dependencies
