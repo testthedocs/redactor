@@ -64,7 +64,8 @@ build: ## Build binary
 	@if [ -d $(PROD_BUILDS) ]; then rm -rf $(PROD_BUILDS); fi;
 	@go fmt
 	@gox -ldflags "$(LD_FLAGS) -X main.Version=${VERSION} \
-	 -X github.com/testthedocs/redactor/cmd.BuildDate=$(BUILD_DATE)" \
+	 -X github.com/testthedocs/redactor/cmd.BuildDate=$(BUILD_DATE) \
+	 -X github.com/testthedocs/redactor/cmd.GitCommit=$(GIT_COMMIT)" \
 	 -osarch="linux/amd64 darwin/amd64" -output "$(PROD_BUILDS)/{{.Dir}}_{{.OS}}_{{.Arch}}"
 	@echo ""
 	@echo "$(YELLOW)==> Done ! Binaries for $(VERSION) are created in $(PROD_BUILDS) $(RESET)"
