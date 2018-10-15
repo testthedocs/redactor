@@ -39,3 +39,7 @@ Markdown Lint
     redactor mdlint
 
 .. image:: _static/redactor-mdlint.png
+
+This check is based on `markdownlint <https://github.com/DavidAnson/markdownlint/>`_.
+
+Please check `Rules and Aliases <https://github.com/DavidAnson/markdownlint#rules--aliases>`_.
