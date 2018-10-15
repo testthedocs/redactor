@@ -26,6 +26,9 @@ import (
 var buildCmd = &cobra.Command{
 	Use:   "mdlint",
 	Short: "Markdown Linter",
+	Long: `Based on https://github.com/DavidAnson/markdownlint
+	
+		Rules and Aliases: https://github.com/DavidAnson/markdownlint#rules--aliases`,
 	Run: func(cmd *cobra.Command, args []string) {
 		buildHTML()
 	},

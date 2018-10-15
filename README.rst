@@ -7,13 +7,9 @@ Redactor
 A work in progress editor-in-chief to highlight potential linguistic and structural issues with your text.
 
 Features
-
-User enabled and overridable documentation checks, planned for inclusion in beta release:
+========
 
 - Check Markdown best practices
-- Check RST best practices
-- Check generated HTML best practices
-- Validate links
 - Spelling, Grammar, style and readability
 
 Dependencies
@@ -21,20 +17,25 @@ Dependencies
 
 - `Docker <https://docker.com/>`_
 
-Documentation
-=============
-
-Full documentation for end users can be found in the "/docs" folder.
-
 Installation
 ============
 
-None right now.
+Install it via ``curl``:
 
-Usage
-=====
+::
 
-None right now.
+    curl https://raw.githubusercontent.com/testthedocs/redactor/master/install.sh | sh
+
+Install via ``go get``:
+
+::
+
+    go get github.com/testthedocs/redactor
+
+Documentation
+=============
+
+You can find the HTML version `online <https://redactor.testthedocs.org>`_ and the source on `GitHub <https://github.com/testthedocs/redactor/>`_.
 
 Contribute
 ==========

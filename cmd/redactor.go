@@ -33,16 +33,11 @@ var cfgFile string
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "redactor",
-	Short: "TTD POC",
-	//Long: `A longer description that spans multiple lines and likely contains
-	//examples and usage of using your application. For example:
+	Short: "Documentation Quality Assurance Framework",
+	Long: `A work in progress editor-in-chief to highlight potential linguistic and structural issues with your text.
 
-	//Cobra is a CLI library for Go that empowers applications.
-	//This application is a tool to generate the needed files
-	//to quickly create a Cobra application.`,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
-	//	Run: func(cmd *cobra.Command, args []string) { },
+	Documentation: https://redactor.testthedocs.org
+	GitHub: https://github.com/testthedocs/redactor`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
