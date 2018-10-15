@@ -18,7 +18,7 @@ How To Cut A New Release
 - Tag *master* with version/release number
 - Run ``make build``
 - Export GitHub token ``export GITHUB_TOKEN=abc123``
-- Run ``ghr`` with version/release number ans path to packages: ``ghr 0.0.1 dist``
+- Run ``ghr`` with version/release number and path to packages: ``ghr 0.0.1 dist``
 
 Check ``ghr`` for more possible options.
 
