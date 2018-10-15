@@ -22,7 +22,6 @@ Help
 
     redactor help
 
-
 Vale
 ====
 
@@ -30,6 +29,7 @@ Vale
 
     redactor vale
 
+.. image:: _static/redactor-vale.png
 
 Markdown Lint
 =============
@@ -37,3 +37,5 @@ Markdown Lint
 .. code-block:: console
 
     redactor mdlint
+
+.. image:: _static/redactor-mdlint.png
