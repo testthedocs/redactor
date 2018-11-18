@@ -15,7 +15,7 @@
 package cmd
 
 import (
-	//"fmt"
+	"fmt"
 	"os"
     "os/exec"
 
@@ -33,12 +33,18 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 Run: func(cmd *cobra.Command, args []string) {
-		runVale()
+	   if len(args) > 0 {
+		runVale("testthedocs/ttd-vale " + args[0])
+        } else {
+					runVale("testthedocs/ttd-vale")
+		}
 	},
 }
 
-func runVale() {
-	cmdStr := "docker run -it --rm -v `pwd`:/srv/tests testthedocs/ttd-vale"
+func runVale(params string) {
+	fmt.Printf("%v", params)
+
+	cmdStr := "docker run -it --rm -v `pwd`:/srv/tests " + files
         cmd := exec.Command("bash", "-c", cmdStr)
 	cmd.Stdout = os.Stdout
 	cmd.Stdin = os.Stdin
