@@ -23,13 +23,6 @@ Clone the repository:
     cd $PATH_TO_YOUR_GOPATH/src/github.com
     git clone https://github.com/testthedocs/redactor.git
 
-Install dependencies with ``dep``:
-
-.. code-block:: console
-
-    dep ensure -vendor-only
-
-Or run ``make setup`` from the /root of the repository.
 
 Code Blueprint
 ==============

@@ -55,7 +55,6 @@ ifeq ($(OS), Darwin)
 else
 	curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 endif
-	dep ensure -vendor-only
 
 .PHONY: build
 build: ## Build binary
